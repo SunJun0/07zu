@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AchievementssDal.cs" />
+    <Compile Include="DBHelperProc.cs" />
     <Compile Include="MarketsDal.cs" />
     <Compile Include="GoodssDal.cs" />
     <Compile Include="EmployeessDal.cs" />
