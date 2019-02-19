@@ -14,5 +14,9 @@ namespace BLL
         {
             return dal.Add(m);
         }
+        public int Del(int id)
+        {
+            return dal.Del(id);
+        }
     }
 }
