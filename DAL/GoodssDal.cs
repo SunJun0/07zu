@@ -16,7 +16,7 @@ namespace DAL
             string sql = string.Format("insert into Goods values('{0}','{1}',{2},{3},{4},{5},'{6}',{7})",m.GName,m.GColor,m.GSize,m.GQuantity,m.GPrice,m.GPricing,m.GPicture,m.GState);
             return DBHelper.ExecuteNonQuery(sql);
         }
-        public DataTable index()//商品显示
+        public DataTable Index()//商品显示
         {
             string sql = "select * from Goods";
             return DBHelper.GetDataTable(sql);

@@ -1,13 +1,13 @@
-﻿using System;
+﻿using BLL;
+using Model;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Data;
-using Model;
-using BLL;
-using Newtonsoft.Json;
 
 namespace Shop.Controllers
 {
@@ -18,9 +18,10 @@ namespace Shop.Controllers
         {
             return goodssBll.Add(m);
         }
-        public List<Goods> index()//商品显示
+        [HttpGet]
+        public List<Goods> Index()//商品显示
         {
-            DataTable dt= goodssBll.index();
+            DataTable dt = goodssBll.Index();
             var ee = JsonConvert.SerializeObject(dt);
             return JsonConvert.DeserializeObject<List<Goods>>(ee);
         }

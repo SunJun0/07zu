@@ -16,9 +16,9 @@ namespace BLL
         {
             return goodssDal.Add(m);
         }
-        public DataTable index()//商品显示
+        public DataTable Index()//商品显示
         {
-            return goodssDal.index();
+            return goodssDal.Index();
         }
     }
 }
