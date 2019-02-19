@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication1.Controllers
+namespace DAL
 {
     public class DBHelper
     {
