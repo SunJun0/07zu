@@ -5,7 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-
+namespace DAL
+{
     public class DBHelper
     {
         public static string connStr = "Data Source=.;Initial Catalog=xiaoyiYueKaoLianxi;Integrated Security=True";
@@ -124,3 +125,4 @@ using System.Web;
 
         }
     }
+}
