@@ -10,6 +10,14 @@ namespace Shop.Controllers
 {
     public class EmployeesController : ApiController
     {
-        
+        EmployeessBLL bll = new EmployeessBLL();
+        public int AddEmployees(Employees m)
+        {
+            return bll.Add(m);
+        }
+        public int DelEmployees(int id)
+        {
+            return bll.Del(id);
+        }
     }
 }
