@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using DAL;
+using Model;
 
 namespace BLL
 {

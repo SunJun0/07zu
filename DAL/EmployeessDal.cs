@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 using Model;
 namespace DAL
 {
-   public class EmployeessDAL
+    public class EmployeessDAL
     {
         public int Add(Employees m)
         {
             string sql = string.Format("insert into Employees values('{0}','{1}','{2}','{3}','{4}','{5}')", m.EName, m.ESex, m.EHiredate, m.EPwd, m.ERole, m.EState);
+            return DBHelper.ExecuteNonQuery(sql);
+        }
+        public int Del(int id)
+        {
+            string sql = "delete from Employees where id ="+id;
             return DBHelper.ExecuteNonQuery(sql);
         }
     }
