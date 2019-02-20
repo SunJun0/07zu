@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using Newtonsoft.Json;
+
 namespace DAL
 {
     public class EmployeessDAL
@@ -17,6 +20,14 @@ namespace DAL
         {
             string sql = "delete from Employees where id ="+id;
             return DBHelper.ExecuteNonQuery(sql);
+        }
+        public List<Employees> ShowEmployees()
+        {
+            string sql = "select * from Employees";
+            DataTable dt = DBHelper.GetDataTable(sql);
+            var ee = JsonConvert.SerializeObject(dt);
+            List<Employees> ff = JsonConvert.DeserializeObject<List<Employees>>(ee);
+            return ff;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DBHelper
     {
-        public static string connStr = "Data Source=.;Initial Catalog=xiaoyiYueKaoLianxi;Integrated Security=True";
+        public static string connStr = "Data Source=.;Initial Catalog=Group7;Integrated Security=True";
         public static SqlConnection cnn = new SqlConnection(connStr);
 
         /// <summary>
