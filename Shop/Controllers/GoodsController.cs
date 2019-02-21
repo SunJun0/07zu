@@ -14,6 +14,7 @@ namespace Shop.Controllers
     public class GoodsController : ApiController
     {
         GoodssBll goodssBll = new GoodssBll();
+        [HttpPost]
         public int Add(Goods m)//商品入库
         {
             return goodssBll.Add(m);
