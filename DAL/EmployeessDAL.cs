@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using Newtonsoft.Json;
+
 namespace DAL
 {
     public class EmployeessDAL
@@ -17,6 +20,32 @@ namespace DAL
         {
             string sql = "delete from Employees where id ="+id;
             return DBHelper.ExecuteNonQuery(sql);
+        }
+        public List<Employees> ShowEmployees()
+        {
+            string sql = "select * from Employees";
+            DataTable dt = DBHelper.GetDataTable(sql);
+            var ee = JsonConvert.SerializeObject(dt);
+            List<Employees> ff = JsonConvert.DeserializeObject<List<Employees>>(ee);
+            return ff;
+        }
+        //已销售的商品
+        public List<Market> ShowMarket()
+        {
+            string sql = "select * from Market m join Goods g on m.ShopId=g.GId";
+            DataTable dt = DBHelper.GetDataTable(sql);
+            var ee = JsonConvert.SerializeObject(dt);
+            List<Market> ff = JsonConvert.DeserializeObject<List<Market>>(ee);
+            return ff;
+        }
+        //利润
+        public List<Market> ShowProfit()
+        {
+            string sql = "select  month(Market.MTime) as month,Sum((Convert(int,GPricing)-Convert(int,GPrice))* MNnum) as Profit from Goods join Market on Goods.GId = Market.ShopId  group by month(Market.MTime),month(Market.MTime) ";
+            DataTable dt = DBHelper.GetDataTable(sql);
+            var ee = JsonConvert.SerializeObject(dt);
+            List<Market> ff = JsonConvert.DeserializeObject<List<Market>>(ee);
+            return ff;
         }
     }
 }

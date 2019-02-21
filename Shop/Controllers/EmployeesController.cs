@@ -19,5 +19,20 @@ namespace Shop.Controllers
         {
             return bll.Del(id);
         }
+        [HttpGet]
+        public List<Employees> ShowEmployees()
+        {
+            return bll.ShowEmployees();
+        }
+        [HttpGet]
+        public List<Market> ShowMarket()
+        {
+            return bll.ShowMarket();
+        }
+        [HttpGet]
+        public List<Market> ShowProfit()
+        {
+            return bll.ShowProfit();
+        }
     }
 }

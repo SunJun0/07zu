@@ -18,5 +18,17 @@ namespace BLL
         {
             return dal.Del(id);
         }
+        public List<Employees> ShowEmployees()
+        {
+            return dal.ShowEmployees();
+        }
+        public List<Market> ShowMarket()
+        {
+            return dal.ShowMarket();
+        }
+        public List<Market> ShowProfit()
+        {
+            return dal.ShowProfit();
+        }
     }
 }
