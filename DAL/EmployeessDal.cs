@@ -47,5 +47,6 @@ namespace DAL
             List<Market> ff = JsonConvert.DeserializeObject<List<Market>>(ee);
             return ff;
         }
+        
     }
 }
