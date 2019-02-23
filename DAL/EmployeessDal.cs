@@ -47,6 +47,24 @@ namespace DAL
             List<Market> ff = JsonConvert.DeserializeObject<List<Market>>(ee);
             return ff;
         }
-        
+        //按员工ID查询密码
+        public List<Employees> Sel(int id)
+        {
+            string sql = "select EPwd from Employees where EId="+id;
+            DataTable dt = DBHelper.GetDataTable(sql);
+            List<Employees> list =  JsonConvert.DeserializeObject<List<Employees>>(JsonConvert.SerializeObject(dt));
+            return list;
+           
+            
+        }
+        //按员工ID修改密码
+        public int Upd(Employees s)
+        {
+            string sql = string.Format("update Employees set EPwd='{0}' where EId='{1}'", s.EPwd, s.EId);
+           int i=  DBHelper.ExecuteNonQuery(sql);
+            return i;
+
+        }
+
     }
 }

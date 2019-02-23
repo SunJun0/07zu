@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Web.Http;
 using Model;
 using BLL;
+using System.Data;
+
 namespace Shop.Controllers
 {
     public class EmployeesController : ApiController
@@ -33,6 +35,20 @@ namespace Shop.Controllers
         public List<Market> ShowProfit()
         {
             return bll.ShowProfit();
+        }
+
+        //按员工ID查询密码
+        [HttpGet]
+        public List<Employees> Sel(int id)
+        {
+            return bll.Sel(id);
+        }
+        //按员工ID修改密码
+        [HttpPut]
+        public int Upd(Employees s)
+        {
+            return bll.Upd(s);
+
         }
     }
 }
