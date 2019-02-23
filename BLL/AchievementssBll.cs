@@ -14,6 +14,10 @@ namespace BLL
         {
             return dal.GetAchievements();
         }
+        public List<Achievements> GetAchievements_1()
+        {
+            return dal.GetAchievements_1();
+        }
 
     }
 }

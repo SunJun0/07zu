@@ -16,5 +16,10 @@ namespace Shop.Controllers
         {
             return dal.GetAchievements();
         }
+        [HttpGet]
+        public List<Achievements> GetAchievements_1()
+        {
+            return dal.GetAchievements();
+        }
     }
 }
