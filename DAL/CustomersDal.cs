@@ -17,7 +17,7 @@ namespace DAL
 
         }
 
-        public List<Customer> Get()
+        public List<Customer> Get()//顾客查询
         {
             string sql = "select * from Customer";
             DataTable dt = DBHelper.GetDataTable(sql);
