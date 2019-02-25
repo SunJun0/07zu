@@ -66,5 +66,14 @@ namespace DAL
 
         }
 
+        //总进价金额
+        public List<Market> ShowPrice()
+        {
+            string sql = "SELECT SUM(GPrice * GQuantity) as Zong FROM Goods";
+            DataTable dt = DBHelper.GetDataTable(sql);
+            var ee = JsonConvert.SerializeObject(dt);
+            List<Market> ff = JsonConvert.DeserializeObject<List<Market>>(ee);
+            return ff;
+        }
     }
 }

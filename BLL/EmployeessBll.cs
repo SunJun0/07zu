@@ -42,5 +42,9 @@ namespace BLL
             return dal.Upd(s);
 
         }
+        public List<Market> ShowPrice()
+        {
+            return dal.ShowPrice();
+        }
     }
 }

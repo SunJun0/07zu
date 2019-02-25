@@ -50,5 +50,10 @@ namespace Shop.Controllers
             return bll.Upd(s);
 
         }
+        [HttpGet]
+        public List<Market> ShowPrice()
+        {
+            return bll.ShowPrice();
+        }
     }
 }
