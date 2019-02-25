@@ -31,10 +31,6 @@ namespace BLL
         {
             return dal.ShowProfit();
         }
-        public List<Market> ShowPrice()
-        {
-            return dal.ShowPrice();
-        }
         //按员工ID查询密码
         public List<Employees> Sel(int id)
         {
@@ -45,6 +41,10 @@ namespace BLL
         {
             return dal.Upd(s);
 
+        }
+        public List<Market> ShowPrice()
+        {
+            return dal.ShowPrice();
         }
     }
 }
