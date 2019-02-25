@@ -21,5 +21,10 @@ namespace DAL
             string sql = "select * from Goods";
             return DBHelper.GetDataTable(sql);
         }
+        public int Updata(int id)//修改上下架
+        {
+            string sql = string.Format("update Goods set GState=1 where GId={0}",id);
+            return DBHelper.ExecuteNonQuery(sql);
+        }
     }
 }
