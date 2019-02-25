@@ -75,5 +75,14 @@ namespace DAL
             List<Market> ff = JsonConvert.DeserializeObject<List<Market>>(ee);
             return ff;
         }
+        //员工上个月的工资 
+        public List<Achievements> ShowWages()
+        {
+            string sql = "select ROW_NUMBER() over(order by  ASale DESC ) RowNum,Employees.EName,Employees.ESex,3000+Achievements.ASale*0.1 AS payroll  from Employees join Achievements on Employees.EId =Achievements.AEId where  DATEPART(m,Achievements.AMonth)= MONTH(GETDATE())-1  and Employees.EState =0";
+            DataTable dt = DBHelper.GetDataTable(sql);
+            var ee = JsonConvert.SerializeObject(dt);
+            List<Achievements> ff = JsonConvert.DeserializeObject<List<Achievements>>(ee);
+            return ff;
+        }
     }
 }

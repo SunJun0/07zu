@@ -55,5 +55,11 @@ namespace Shop.Controllers
         {
             return bll.ShowPrice();
         }
+        //员工上个月的工资 
+        [HttpGet]
+        public List<Achievements> ShowWages()
+        {
+            return bll.ShowWages();
+        }
     }
 }
