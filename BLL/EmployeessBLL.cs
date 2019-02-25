@@ -30,5 +30,9 @@ namespace BLL
         {
             return dal.ShowProfit();
         }
+        public List<Market> ShowPrice()
+        {
+            return dal.ShowPrice();
+        }
     }
 }
