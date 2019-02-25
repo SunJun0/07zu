@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,17 @@ namespace BLL
         public List<Market> ShowPrice()
         {
             return dal.ShowPrice();
+        }
+        //按员工ID查询密码
+        public List<Employees> Sel(int id)
+        {
+            return dal.Sel(id);
+        }
+        //按员工ID修改密码
+        public int Upd(Employees s)
+        {
+            return dal.Upd(s);
+
         }
     }
 }
