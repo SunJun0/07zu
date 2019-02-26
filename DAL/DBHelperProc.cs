@@ -9,7 +9,9 @@ namespace DAL
 {
     public class DBHelper
     {
-        public static string connStr = "Server=10.1.155.88;DATABASE=Group7;UID=sa;PWD=123";
+
+        private static string connStr = "Data Source=.;Initial Catalog=Group7;Integrated Security=True";
+        //public static string connStr = "Server=10.1.155.88;DATABASE=Group7;UID=sa;PWD=123";
         public static SqlConnection cnn = new SqlConnection(connStr);
 
         /// <summary>
