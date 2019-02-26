@@ -42,5 +42,15 @@ namespace BLL
             return dal.Upd(s);
 
         }
+        public List<Market> ShowPrice()
+        {
+            return dal.ShowPrice();
+        }
+        //员工上个月的工资 
+        public List<Achievements> ShowWages()
+        {
+
+            return dal.ShowWages();
+        }
     }
 }

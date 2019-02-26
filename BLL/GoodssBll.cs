@@ -20,5 +20,9 @@ namespace BLL
         {
             return goodssDal.Index();
         }
+        public int Updata(int id)//商品显示
+        {
+            return goodssDal.Updata(id);
+        }
     }
 }

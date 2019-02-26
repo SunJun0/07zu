@@ -13,6 +13,7 @@ namespace Model
         public int AMonth { get; set; }  //月度
         public float ASale { get; set; }  //销售额
         public int RowNum { get; set; }  //数据库生成的排名列
+        public Double payroll { get; set; } //总进价金额
 
         public int EId { get; set; }  //主键，自增列
         public string EName { get; set; }  //员工姓名

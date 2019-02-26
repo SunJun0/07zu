@@ -50,5 +50,16 @@ namespace Shop.Controllers
             return bll.Upd(s);
 
         }
+        [HttpGet]
+        public List<Market> ShowPrice()
+        {
+            return bll.ShowPrice();
+        }
+        //员工上个月的工资 
+        [HttpGet]
+        public List<Achievements> ShowWages()
+        {
+            return bll.ShowWages();
+        }
     }
 }
