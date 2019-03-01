@@ -69,6 +69,7 @@ namespace Shop.Controllers
         #endregion
 
         #region 修改员工的业绩和顾客的积分
+        [HttpPut]
         public int UpdateJi(model m)
         {
             return shopcar.UpdateJi(m);
