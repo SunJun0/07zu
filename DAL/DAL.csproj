@@ -48,12 +48,16 @@
   <ItemGroup>
     <Compile Include="AccountDal.cs" />
     <Compile Include="AchievementssDal.cs" />
+    <Compile Include="DBHelper.cs" />
     <Compile Include="DBHelperProc.cs" />
+    <Compile Include="EmployeesDAL.cs" />
+    <Compile Include="MarketDAL.cs" />
     <Compile Include="MarketsDal.cs" />
     <Compile Include="GoodssDal.cs" />
     <Compile Include="EmployeessDal.cs" />
     <Compile Include="CustomersDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopCarDal.cs" />
     <Compile Include="SqlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
