@@ -73,7 +73,16 @@ namespace DAL
         #region 修改员工的业绩和顾客的积分
         public int UpdateJi(model m)
         {
-            string sql = string.Format("");
+            string sql = "";
+            if (m.GId==0)
+            {
+               sql  = string.Format("exec Per_proc '{0}','{1}'",m.YId,m.SumPrice);
+               
+            }
+            else
+            {
+                sql = string.Format("exec Per_Jiproc '{0}','{1}','{2}'", m.YId, m.SumPrice, m.GId);
+            }
             return DBHelper.ExecuteNonQuery(sql);
         }
         #endregion
