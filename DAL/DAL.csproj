@@ -48,12 +48,19 @@
   <ItemGroup>
     <Compile Include="AccountDal.cs" />
     <Compile Include="AchievementssDal.cs" />
+    <Compile Include="DBHelper.cs" />
     <Compile Include="DBHelperProc.cs" />
+    <Compile Include="EmployeesDAL.cs" />
+    <Compile Include="MarketDAL.cs" />
     <Compile Include="MarketsDal.cs" />
     <Compile Include="GoodssDal.cs" />
     <Compile Include="EmployeessDal.cs" />
     <Compile Include="CustomersDal.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopCarDal.cs" />
     <Compile Include="SqlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +68,28 @@
       <Project>{1cd4c90c-6e89-4ff7-ac6e-b8a8bb9c9d3e}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DAL.csproj.CopyComplete" />
+    <None Include="obj\Debug\DAL.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DAL.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\DAL.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\DAL.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DAL.dll" />
+    <Content Include="bin\Debug\DAL.pdb" />
+    <Content Include="bin\Debug\Model.dll" />
+    <Content Include="bin\Debug\Model.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="obj\Debug\DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DAL.dll" />
+    <Content Include="obj\Debug\DAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
